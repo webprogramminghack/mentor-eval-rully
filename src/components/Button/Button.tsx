@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { PuffLoader } from 'react-spinners';
 
 type ButtonProps = {
-  color?: 'primary' | 'secondary' | 'danger';
+  color?: 'primary' | 'secondary' | 'danger'| 'purple';
   children?: ReactNode;
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   onKeyDown?: (event: KeyboardEvent<HTMLButtonElement>) => void;
@@ -25,6 +25,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
         [styles.primary]: color === 'primary',
         [styles.secondary]: color === 'secondary',
         [styles.danger]: color === 'danger',
+        [styles.purple]: color === 'purple',
         [styles.isLoading]: isLoading,
       })}
       disabled={disabled || isLoading}
